@@ -1,0 +1,5 @@
+markdown: rdiscount
+pygments: true
+permalink: /:year/:month/:title.html
+name: HanHor笔记
+markdown: rdiscount
