@@ -21,3 +21,6 @@ tags:
 >[1000 个小时学会 Rails - 005 X 项目的静态页面](http://ruby-china.org/topics/3313)
 
 目前作者[Junito](http://ruby-china.org/users/Juanito)只写到这里，以后更新了这边目录再接着更新上去。
+
+Ruby学习资料:
+>[Learn Ruby The Hard Way(笨方法學 Ruby)](http://lrthw.github.com/),作者[@lrthw ](https://github.com/lrthw) .
