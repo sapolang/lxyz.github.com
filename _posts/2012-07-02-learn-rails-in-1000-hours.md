@@ -5,7 +5,7 @@ tags:
  - rails
 ---
 
-今天打开[ruby-china](https://www.ruby-china.org)时，发现了这个“1000小时学会rails”系列文章，作者是[Junito](http://ruby-china.org/users/Juanito),发现写的通俗易懂，细节上面讲的很不错，对我这种初学者来说很合适，就把链接贴过来，好好研究学习。
+今天打开[ruby-china](http://www.ruby-china.org)时，发现了这个“1000小时学会rails”系列文章，作者是[Junito](http://ruby-china.org/users/Juanito),发现写的通俗易懂，细节上面讲的很不错，对我这种初学者来说很合适，就把链接贴过来，好好研究学习。
 
 以下是该系列的目录：
 >[1000 个小时学会 Rails - 000 Rails 前世今生](http://ruby-china.org/topics/2799)
