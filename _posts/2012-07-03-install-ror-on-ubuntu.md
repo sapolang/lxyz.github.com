@@ -5,7 +5,7 @@ tags:
   - ruby
   - rails
 ---
-* 1.安装yaml
+ 1.安装yaml
 
     wget http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz
     tar xzvf yaml-0.1.4.tar.gz
@@ -14,42 +14,42 @@ tags:
     make
     sudo make install
 
-* 2.安装ruby
+ 2.安装ruby
     ./configure --prefix=/usr/local --enable-shared --disable-install-doc --with-opt-dir=/usr/local/lib
     make
     sudo make install
-* 3.安装zlib
+ 3.安装zlib
     sudo apt-get install zlib1g-dev 
     cd ruby-1.9.3-p0/ext/zlib$
     sudo ruby extconf.rb 
     sudo  make 
     sudo make install
 
-* 4.在 ~/.gemrc或/etc/gemrc 文件中加上下面一行，之后通过gem安装的程序都不带ri/rdoc
+ 4.在 ~/.gemrc或/etc/gemrc 文件中加上下面一行，之后通过gem安装的程序都不带ri/rdoc
     gem: --no-ri --no-rdoc
 或
     install: --no-rdoc --no-ri 
     update:  --no-rdoc --no-ri
 
-* 6.换淘宝的源
+ 6.换淘宝的源
     $ gem sources --remove http://rubygems.org/
     $ gem sources -a http://ruby.taobao.org/
     $ gem sources -l
-    *** CURRENT SOURCES ***
+    ** CURRENT SOURCES ***
 
     http://ruby.taobao.org
     # 请确保只有 ruby.taobao.org
 
-* 7.安装javascript runtime
+ 7.安装javascript runtime
     sudo apt-get install nodejs
 
-* 8.安装openssl支持
+ 8.安装openssl支持
     sudo apt-get install libssl-dev
     cd /ruby-source-files/ext/openssl
     sudo ruby extconf.rb
     sudo  make
     sudo make install
-* 9.增加mysql支持
+ 9.增加mysql支持
 首先要安装mysql，没有安装的话请先安装
     sudo apt-get install mysql-server
     sudo apt-get install libmysql-ruby libmysqlclient-dev
