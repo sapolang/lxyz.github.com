@@ -1,24 +1,23 @@
 ---
+layout : post
 title: ubuntu安装Ruby on Rails
 tags:
-  -ruby
-  -rails
+  - ruby
+  - rails
 ---
 1.安装yaml
 
-wget http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz
-tar xzvf yaml-0.1.4.tar.gz
-cd yaml-0.1.4
-./configure --prefix=/usr/local
-make
-sudo make install
+    wget http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz
+    tar xzvf yaml-0.1.4.tar.gz
+    cd yaml-0.1.4
+    ./configure --prefix=/usr/local
+    make
+    sudo make install
 
 2.安装ruby
-```bash
-./configure --prefix=/usr/local --enable-shared --disable-install-doc --with-opt-dir=/usr/local/lib
-make
-sudo make install
-```
+    ./configure --prefix=/usr/local --enable-shared --disable-install-doc --with-opt-dir=/usr/local/lib
+    make
+    sudo make install
 3.安装zlib
 ```bash
 sudo apt-get install zlib1g-dev 
