@@ -69,7 +69,14 @@ tags:
 补充：
 
  1.安装nokogiri
+ 
 Nokogiri是一个高效的HTML/XML的解析器。安装方法如下:
     sudo apt-get install libxslt-dev libxml2-dev
     sudo gem install nokogiri
+ 2.安装postgres
+    sudo aptitude installi postgresql-9.1 postgresql-server-dev-9.1 libpq-dev
+安装postgres图形化管理工具pgAdmin
+    sudo aptitude install pgadmin3
 
+安装postgres的gem
+    sudo gem install do_postgres
