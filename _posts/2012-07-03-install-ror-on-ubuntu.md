@@ -65,3 +65,11 @@ tags:
 就可以了。
 
 参考[Ubuntu下搭建Ruby On Rails](http://blog.csdn.net/htttw/article/details/7628093)
+
+补充：
+
+ 1.安装nokogiri
+Nokogiri是一个高效的HTML/XML的解析器。安装方法如下:
+    sudo apt-get install libxslt-dev libxml2-dev
+    sudo gem install nokogiri
+
