@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="author" content="HanHor Wu" />
+    
+    <meta name="keywords" content=" - ubuntu安装Ruby on Rails - HanHor笔记" />
+    <title>ubuntu安装Ruby on Rails - HanHor笔记</title>
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link href="/atom.xml" rel="alternate" title="setImpl" type="application/atom+xml" />
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/github.css">
+    <script type="text/javascript" src="/js/highlight.pack.js"></script>
+    <script type="text/javascript">
+      hljs.initHighlightingOnLoad();
+    </script>
+  </head>
+  <body>
+      <div id="main" role="main">
+        <header>
+          <div id="header">
+            <h1><a title="HanHor笔记" class="" href="/">HanHor笔记</a></h1>
+            <nav>
+              <span><a title="archive"  href="/archive.html">Archive</a></span>
+              <span><a title="tags"  href="/tags.html">Tags</a></span>
+              <span><a title="about"  href="/about.html">About</a></span>
+              <span><a title="blogroll"  href="/links.html">Links</a></span>
+              <span><a title="subscribe me"  href="/atom.xml">Feed</a></span>
+            </nav>
+          </div>
+        </header>
+        <div id="content">
+        <article>
+  <section class="title">
+    <h2>ubuntu安装Ruby on Rails </h2>
+  </section>
+  <section class="meta">
+  <span class="time">
+    <time datetime="2012-07-03">2012-07-03</time>
+  </span>
+  
+  <span class="tags">
+    
+    <a href="/tags.html#ruby" title="ruby">#ruby</a>
+    
+    <a href="/tags.html#rails" title="rails">#rails</a>
+    
+  </span>
+  
+  </section>
+  <section class="post">
+  <p> 1.安装yaml</p>
+
+<pre><code>wget http://pyyaml.org/download/libyaml/yaml-0.1.4.tar.gz
+tar xzvf yaml-0.1.4.tar.gz
+cd yaml-0.1.4
+./configure --prefix=/usr/local
+make
+sudo make install
+</code></pre>
+
+<p> 2.安装ruby</p>
+
+<pre><code>./configure --prefix=/usr/local --enable-shared --disable-install-doc --with-opt-dir=/usr/local/lib
+make
+sudo make install
+</code></pre>
+
+<p> 3.安装zlib</p>
+
+<pre><code>sudo apt-get install zlib1g-dev 
+cd ruby-1.9.3-p0/ext/zlib$
+sudo ruby extconf.rb 
+sudo  make 
+sudo make install
+</code></pre>
+
+<p> 4.在 ~/.gemrc或/etc/gemrc 文件中加上下面一行，之后通过gem安装的程序都不带ri/rdoc</p>
+
+<pre><code>gem: --no-ri --no-rdoc
+</code></pre>
+
+<p>或</p>
+
+<pre><code>install: --no-rdoc --no-ri 
+update:  --no-rdoc --no-ri
+</code></pre>
+
+<p> 6.换淘宝的源</p>
+
+<pre><code>$ gem sources --remove http://rubygems.org/
+$ gem sources -a http://ruby.taobao.org/
+$ gem sources -l
+** CURRENT SOURCES ***
+
+http://ruby.taobao.org
+# 请确保只有 ruby.taobao.org
+</code></pre>
+
+<p> 7.安装javascript runtime</p>
+
+<pre><code>sudo apt-get install nodejs
+</code></pre>
+
+<p> 8.安装openssl支持</p>
+
+<pre><code>sudo apt-get install libssl-dev
+cd /ruby-source-files/ext/openssl
+sudo ruby extconf.rb
+sudo  make
+sudo make install
+</code></pre>
+
+<p> 9.增加mysql支持
+首先要安装mysql，没有安装的话请先安装</p>
+
+<pre><code>sudo apt-get install mysql-server
+sudo apt-get install libmysql-ruby libmysqlclient-dev
+sudo gem install mysql2  --no-ri --no-rdoc
+</code></pre>
+
+<p>这样基本就安装完成了。
+新建一个支持mysql数据库项目demo:</p>
+
+<pre><code>rails new demo -d mysql
+</code></pre>
+
+<p>也可以直接</p>
+
+<pre><code>rails new demo
+</code></pre>
+
+<p>完成之后再Gemfile文件中将默认的sqlite3改成mysql2，再执行</p>
+
+<pre><code>bundle
+</code></pre>
+
+<p>就可以了。</p>
+
+<p>参考<a href="http://blog.csdn.net/htttw/article/details/7628093">Ubuntu下搭建Ruby On Rails</a></p>
+
+<p>补充：</p>
+
+<p> 1.安装nokogiri</p>
+
+<p>Nokogiri是一个高效的HTML/XML的解析器。安装方法如下:</p>
+
+<pre><code>sudo apt-get install libxslt-dev libxml2-dev
+sudo gem install nokogiri
+</code></pre>
+
+<p> 2.安装postgres</p>
+
+<pre><code>sudo aptitude installi postgresql-9.1 postgresql-server-dev-9.1 libpq-dev
+</code></pre>
+
+<p>安装postgres图形化管理工具pgAdmin</p>
+
+<pre><code>sudo aptitude install pgadmin3
+</code></pre>
+
+<p>安装postgres的gem</p>
+
+<pre><code>sudo gem install do_postgres
+</code></pre>
+
+  </section>
+  <section class="comment">
+      <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'horx'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+  </section>
+</article>
+
+        </div>
+        <footer>&copy; 2010 ~ 2012 <a href ="http://blog.hanhor.com">HanHor的笔记</a> | <a href="http://www.hanhor.com" target="_blank" title="HanHor.com">HanHor.com</a></footer>
+      </div> <!-- main -->
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33056678-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+  </body>
+</html>
