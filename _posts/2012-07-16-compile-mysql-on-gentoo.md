@@ -6,11 +6,14 @@ tags:
  - mysql
 ---
 gentoo 编译nginx参见:[gentoo编译nginx](http://blog.hanhor.com/2012/07/compile-nginx-on-gentoo.html)
+
 1.下载mysql源码:
+
 我下载的是mysql-5.5.25a
     wget http://cdn.mysql.com/Downloads/MySQL-5.5/mysql-5.5.25a.tar.gz
 
 2.创建mysql用户:
+
 我创建mysql的用户名是mysql,用户组是mysql,命令如下:
     groupadd mysql
     useradd -g mysql -s /sbin/nologin -M mysql
@@ -37,9 +40,11 @@ gentoo 编译nginx参见:[gentoo编译nginx](http://blog.hanhor.com/2012/07/comp
     -DWITH_DEBUG=0
 
 安装目录是/opt/mysql,没指定data目录则data目录为安装目录下的data文件夹.其他的参数可根据需要自己添加.关于cmake可以参考:[MySQL5.5编译工具configure向cmake过渡指南](http://who0168.blog.51cto.com/253401/469898) .
+
 接着:
     make
 make时可以制定 -j参数,来提高编译的效率,参见[make(gmake,gnumake)的-j参数，优化多核、多线程的编译过程](http://hi.baidu.com/qshen/blog/item/4a06a41ec9ad6c1440341773.html).
+
 make完成之后执行:
     make install
 5.配置mysql:
@@ -82,6 +87,7 @@ make完成之后执行:
 
     Please report any problems with the /opt/mysql/scripts/mysqlbug script!
 按照上面输出的提示信息操作就好了.
+
 接着:
     cp support-files/mysql.server /etc/init.d/mysql
     export PATH=/opt/mysql/bin:$PATH
