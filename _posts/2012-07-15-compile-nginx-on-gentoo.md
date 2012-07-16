@@ -19,7 +19,7 @@ tags:
     cd nginx-1.2.2
     ./configure --user=www --group=www --prefix=/opt/nginx --with-http_stub_status_module --with-http_ssl_module --with-http_realip_module --with-http_stub_status_module --with-http_gzip_static_module
 
-安装目录是/opt/mysql,没指定data目录则data目录为安装目录下的data文件夹.其他的参数可根据需要自己添加.具体可以参见[nginx官方wiki](http://wiki.nginx.org/Modules) .
+安装目录是/opt/nginx,其他的模块可根据需要自己添加.具体可以参见[nginx官方wiki](http://wiki.nginx.org/Modules) .
 4.设置开机启动,环境变量等:
 将[nginx.init](https://github.com/HorX/gentoo_server)这个文件下载下来,copy到/etc/init.d/nginx
     cp nginx.init /etc/init.d/nginx
