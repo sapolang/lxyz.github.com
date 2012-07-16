@@ -42,4 +42,4 @@ tags:
     nginx.init
     rc.status
     init-functions
-见https://github.com/HorX/gentoo_server.
+见 [https://github.com/HorX/gentoo_server](https://github.com/HorX/gentoo_server) .
