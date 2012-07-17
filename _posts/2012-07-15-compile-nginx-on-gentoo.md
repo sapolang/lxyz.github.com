@@ -7,17 +7,17 @@ tags:
 ---
   今天搞了个gentoo玩玩.内存开销确实小啊.先在上面编译个nginx.步骤如下:
 
-==1.下载nginx:
+1.下载nginx:
 
 我下载的是nginx 1.2.2 stable
     wget http://nginx.org/download/nginx-1.2.2.tar.gz
 
-==2.创建nginx用户和组:
+2.创建nginx用户和组:
 
 我创建nginx的用户名是www,用户组是www,命令如下:
     groupadd www
     useradd -g www -s /sbin/nologin -M www
-==3.编译nginx:
+3.编译nginx:
     tar zxvf nginx-1.2.2.tar.gz
     cd nginx-1.2.2
     ./configure 
@@ -69,7 +69,8 @@ tags:
     make && make install
 
 这样,nginx就安装完成了.
-==4.设置开机启动,环境变量等:
+
+4.设置开机启动,环境变量等:
 
 将[nginx.init](https://github.com/HorX/gentoo_server)这个文件下载下来,copy到/etc/init.d/nginx
     cp nginx.init /etc/init.d/nginx
