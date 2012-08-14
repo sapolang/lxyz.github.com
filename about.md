@@ -3,12 +3,10 @@ title: About
 layout: page
 ---
 
-A growing up coder live in ShangHai . Interested in web developments now.  Developmented some PHP projects since 2012/11. And now,learing ROR.
-
 Mail:
-> hanhor.wu#gmail.com  //please change '#' to '@'
+> hanhor.wu#gmail.com  //please replace '#' to '@'
 
-> [github](https://github.com/waynezhang)
+> [github](https://github.com/horx)
 
 Websites:
 
