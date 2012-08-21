@@ -1,7 +1,6 @@
 ---
 layout: default
 ---
-
 <div>
   <ul class="listing">
   {% for post in site.posts limit: 2 %}
