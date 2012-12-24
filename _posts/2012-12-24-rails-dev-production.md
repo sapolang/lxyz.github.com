@@ -7,11 +7,13 @@ tags:
 ---
 To Test rails app's Production Environment on dev machine,we should deploy to dev machine first.These tips show how we need to do:
 
-1.migrate databases
+1.create & migrate databases
 
     rake db:create RAILS_ENV=production
-    //migrate databases use the Parameter 'RAILS_ENV=production' 
-      tells system that this is on production environment.
+    //create production database use the parameter 'RAILS_ENV=production'
+
+    rake db:migrate RAILS_ENV=production
+    //migrate procution tables
  
 2.precompile assets
     bundle exec rake assets:precompile RAILS_ENV=production
