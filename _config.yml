@@ -1,6 +1,6 @@
 markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:title.html
-name: HanHor笔记
+name: HanHor's Notes
 auto: true
 markdown: rdiscount
