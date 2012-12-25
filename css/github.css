@@ -5,7 +5,7 @@ pre code{display:block;padding:.7em 1.2em;color:#000;background:#f8f8f8;border-r
 pre .comment,
 pre .template_comment,
 pre .diff .header,
-/* pre .javadoc{color:#998;font-style:italic} */
+pre .javadoc{color:#998;font-style:italic}
 pre .keyword,
 pre .css .rule .keyword,
 pre .winutils,
@@ -34,7 +34,7 @@ pre .attribute,
 pre .variable,
 pre .instancevar,
 pre .lisp .body{color:#008080}
-/* pre .regexp{color:#009926} */
+pre .regexp{color:#009926}
 pre .class{color:#458;font-weight:bold}
 pre .symbol,
 pre .ruby .symbol .string,
