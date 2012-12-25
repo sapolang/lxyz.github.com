@@ -34,7 +34,7 @@ pre .attribute,
 pre .variable,
 pre .instancevar,
 pre .lisp .body{color:#008080}
-pre .regexp{color:#009926}
+/* pre .regexp{color:#009926} */
 pre .class{color:#458;font-weight:bold}
 pre .symbol,
 pre .ruby .symbol .string,
