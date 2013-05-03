@@ -44,6 +44,7 @@ curl https://raw.github.com/fesplugas/rbenv-installer/master/bin/rbenv-installer
    
 将下面内容添加到bash
 
+
 ```
 export RBENV_ROOT="${HOME}/.rbenv"
 
@@ -52,7 +53,9 @@ if [ -d "${RBENV_ROOT}" ]; then
   	eval "$(rbenv init -)"
 fi
 ```
+
 使 bash 生效
+
 
 ```
 source ~/.bashrc
@@ -60,9 +63,11 @@ source ~/.bashrc
    
 安装 rbenv 必要的依赖
 
+
 ```
 rbenv bootstrap-ubuntu-12-04
 ```
+
 4.安装 ruby
 
 ```
@@ -76,13 +81,16 @@ gem install bundler --no-ri --no-rdoc
 
 ```
 gem: --no-ri --no-rdoc
-``` 
+```
+
 或
+
 
 ```
 install: --no-rdoc --no-ri 
 update:  --no-rdoc --no-ri
 ```
+
 添加到 `~/.gemrc`
 
 5.安装 nginx
@@ -93,10 +101,12 @@ sudo add-apt-repository ppa:nginx/stable
 sudo apt-get update
 sudo apt-get -y install nginx
 ```
+
 6.nodejs
 
 ```
 sudo apt-get install nodejs
+
 ```
 7.mysql
 
