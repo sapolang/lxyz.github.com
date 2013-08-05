@@ -3,9 +3,9 @@ title: Links
 layout: page
 ---
 My:
->[HanHor.com](http://www.hanhor.com)
+>[lxyz.github.io/](http://lxyz.github.io/)
 
->[Blog](http://blog.hanhor.com)
+>[Blog](http://lxyz.github.io/)
 
 Friends:
 >[htttw的专栏](http://blog.csdn.net/htttw)

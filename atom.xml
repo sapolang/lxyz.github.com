@@ -3,22 +3,22 @@ layout: nil
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
- <title>HanHor的笔记</title>
- <link href="http://blog.hanhor.com/atom.xml" rel="self"/>
- <link href="http://www.hanhor.com/"/>
+ <title>adam lee的笔记</title>
+ <link href="http://lxyz.github.io/atom.xml" rel="self"/>
+ <link href="http://lxyz.github.io/"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
- <id>http://blog.hanhor.com/</id>
+ <id>http://lxyz.github.io/</id>
  <author>
-   <name>HanHor Wu</name>
-   <email>hanhor.wu#gmail.com</email>
+   <name>adam lee</name>
+   <email>adamismissing#gmail.com</email>
  </author>
 
  {% for post in site.posts limit:10 %}
  <entry>
    <title>{{ post.title }}</title>
-   <link href="http://blog.hanhor.com{{ post.url }}"/>
+   <link href="http://lxyz.github.io/{{ post.url }}"/>
    <updated>{{ post.date | date_to_xmlschema }}</updated>
-   <id>http://blog.hanhor.com{{ post.id }}</id>
+   <id>http://lxyz.github.io/{{ post.id }}</id>
    <content type="html">{{ post.content | xml_escape }}</content>
  </entry>
  {% endfor %}

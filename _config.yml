@@ -1,6 +1,6 @@
 markdown: rdiscount
 pygments: true
 permalink: /:year/:month/:title.html
-name: HanHor's Notes
+name: adam lee Notes
 auto: true
 markdown: rdiscount

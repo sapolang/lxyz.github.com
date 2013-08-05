@@ -4,12 +4,12 @@ layout: page
 ---
 
 Mail:
-> hanhor.wu#gmail.com  //please replace '#' to '@'
+> adamismissing#gmail.com  //please replace '#' to '@'
 
 > [github](https://github.com/horx)
 
 Websites:
 
-[Blog](http://blog.hanhor.com)
+[Blog](http://lxyz.github.io)
 
-[HanHor.com](htttp://www.hanhor.com)
+[http://lxyz.github.io](http://lxyz.github.io)

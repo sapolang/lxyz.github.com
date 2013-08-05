@@ -1,25 +1,25 @@
 ---
 layout: post
-title: gentoo编译mysql
+title: gentoo缂栬瘧mysql
 tags: 
  - gentoo
  - mysql
 ---
-gentoo 编译nginx参见:[gentoo编译nginx](http://blog.hanhor.com/2012/07/compile-nginx-on-gentoo.html)
+gentoo 缂栬瘧nginx鍙傝:[gentoo缂栬瘧nginx](http://lxyz.github.io/2012/07/compile-nginx-on-gentoo.html)
 
-1.下载mysql源码:
+1.涓嬭浇mysql婧愮爜:
 
-我下载的是mysql-5.5.25a
+鎴戜笅杞界殑鏄痬ysql-5.5.25a
     wget http://cdn.mysql.com/Downloads/MySQL-5.5/mysql-5.5.25a.tar.gz
 
-2.创建mysql用户:
+2.鍒涘缓mysql鐢ㄦ埛:
 
-我创建mysql的用户名是mysql,用户组是mysql,命令如下:
+鎴戝垱寤簃ysql鐨勭敤鎴峰悕鏄痬ysql,鐢ㄦ埛缁勬槸mysql,鍛戒护濡備笅:
     groupadd mysql
     useradd -g mysql -s /sbin/nologin -M mysql
-3.安装cmake
+3.瀹夎cmake
     emerge cmake
-4.编译mysql:
+4.缂栬瘧mysql:
     tar mysql-5.5.25a.tar.gz
     cd mysql-5.5.25a
     cmake . \
@@ -39,23 +39,23 @@ gentoo 编译nginx参见:[gentoo编译nginx](http://blog.hanhor.com/2012/07/comp
     -DMYSQL_USER=mysql \
     -DWITH_DEBUG=0
 
-安装目录是/opt/mysql,没指定data目录则data目录为安装目录下的data文件夹.其他的参数可根据需要自己添加.关于cmake可以参考:[MySQL5.5编译工具configure向cmake过渡指南](http://who0168.blog.51cto.com/253401/469898) .
+瀹夎鐩綍鏄�opt/mysql,娌℃寚瀹歞ata鐩綍鍒檇ata鐩綍涓哄畨瑁呯洰褰曚笅鐨刣ata鏂囦欢澶�鍏朵粬鐨勫弬鏁板彲鏍规嵁闇�鑷繁娣诲姞.鍏充簬cmake鍙互鍙傝�:[MySQL5.5缂栬瘧宸ュ叿configure鍚慶make杩囨浮鎸囧崡](http://who0168.blog.51cto.com/253401/469898) .
 
-接着:
+鎺ョ潃:
     make
-make时可以制定 -j参数,来提高编译的效率,参见[make(gmake,gnumake)的-j参数，优化多核、多线程的编译过程](http://hi.baidu.com/qshen/blog/item/4a06a41ec9ad6c1440341773.html).
+make鏃跺彲浠ュ埗瀹�-j鍙傛暟,鏉ユ彁楂樼紪璇戠殑鏁堢巼,鍙傝[make(gmake,gnumake)鐨�j鍙傛暟锛屼紭鍖栧鏍搞�澶氱嚎绋嬬殑缂栬瘧杩囩▼](http://hi.baidu.com/qshen/blog/item/4a06a41ec9ad6c1440341773.html).
 
-make完成之后执行:
+make瀹屾垚涔嬪悗鎵ц:
     make install
-5.配置mysql:
+5.閰嶇疆mysql:
     cd /opt/mysql
     cp support-files/my-medium.cnf /opt/mysql/etc/my.cnf
-安装初始数据库:
+瀹夎鍒濆鏁版嵁搴�
 
     script/mysql_install_db --user=mysql --basedir=/opt/mysql
-注意,这里的mysql_install_db 在安装mysql目录下的script/目录中.
+娉ㄦ剰,杩欓噷鐨刴ysql_install_db 鍦ㄥ畨瑁卪ysql鐩綍涓嬬殑script/鐩綍涓�
 
-执行完成之后会提示如下信息:
+鎵ц瀹屾垚涔嬪悗浼氭彁绀哄涓嬩俊鎭�
     Installing MySQL system tables...
     OK
     Filling help tables...
@@ -86,14 +86,14 @@ make完成之后执行:
     cd /opt/mysql/mysql-test ; perl mysql-test-run.pl
 
     Please report any problems with the /opt/mysql/scripts/mysqlbug script!
-按照上面输出的提示信息操作就好了.
+鎸夌収涓婇潰杈撳嚭鐨勬彁绀轰俊鎭搷浣滃氨濂戒簡.
 
-接着:
+鎺ョ潃:
     cp support-files/mysql.server /etc/init.d/mysql
     export PATH=/opt/mysql/bin:$PATH
     rc-update add mysql default
-现在启动mysql看看:
+鐜板湪鍚姩mysql鐪嬬湅:
     /etc/init.d/mysql start
-发现安装已经完成了.
+鍙戠幇瀹夎宸茬粡瀹屾垚浜�
 
-参考 [Ubuntu 安装MySQL](http://blog.csdn.net/htttw/article/details/6802130) .
+鍙傝� [Ubuntu 瀹夎MySQL](http://blog.csdn.net/htttw/article/details/6802130) .
