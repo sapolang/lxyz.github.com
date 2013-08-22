@@ -3,7 +3,7 @@ layout: post
 title: redis and phpredis扩展的安装
 tags:
  - blog
- - markdown
+ - redis phpredis
 ---
 
 
