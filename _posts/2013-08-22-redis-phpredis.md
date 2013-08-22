@@ -1,3 +1,12 @@
+---
+layout: post
+title: markdown 语法
+tags:
+ - blog
+ - markdown
+---
+
+
 ##linux上安装redis和phpredis扩展
   #### 安装redis server
     1.下载redis稳定版，当前版本为2.6.15
