@@ -1,6 +1,6 @@
 ---
 layout: post
-title: markdown 语法
+title: redis and phpredis扩展的安装
 tags:
  - blog
  - markdown
