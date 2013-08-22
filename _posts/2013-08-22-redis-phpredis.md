@@ -7,8 +7,7 @@ tags:
 ---
 
 
-##linux上安装redis和phpredis扩展
-  #### 安装redis server
+#### 安装redis server
     1.下载redis稳定版，当前版本为2.6.15
         wget http://download.redis.io/releases/redis-2.6.15.tar.gz
     2.解压
