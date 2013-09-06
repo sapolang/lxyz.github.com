@@ -1,6 +1,6 @@
 ---
 layout: post
-title: bootstrap
+title: bootstrap初步
 tags:
  - blog
  - bootstarp 初步
