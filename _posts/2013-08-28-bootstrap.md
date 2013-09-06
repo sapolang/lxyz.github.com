@@ -7,7 +7,6 @@ tags:
 ---
 
 
-## bootstrap 初步
 
 ####bootstrap文件结构
     bootstrap.css,bootstrap.js,glyphicons-halflings.png
