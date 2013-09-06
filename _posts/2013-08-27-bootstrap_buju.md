@@ -1,13 +1,13 @@
 ---
 layout: post
-title: bootstrap
+title: bootstrap 布局
 tags:
  - blog
  - bootstarp 布局
 ---
 
 
-## bootstrap 初步
+## bootstrap 布局
 
 ####bootstrap文件结构
     bootstrap.css,bootstrap.js,glyphicons-halflings.png
